@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="blog3style.css">
+    </head>
+    <body>
+        <div id="container">
+            <img id="imgRandom" src="" alt="">
+            <button onclick="randomPath()">Click for a random image</button>
+        </div>
+    </body>
+    <script>
+        const links = [
+            "https://www.istockphoto.com/photo/silhouettes-of-sharks-underwater-in-ocean-against-bright-light-3d-rendered-gm1151479396-312086880",
+            "https://www.istockphoto.com/photo/great-white-shark-smile-gm533130811-56157656",
+            "https://www.istockphoto.com/photo/smiling-great-white-shark-gm511992494-86925347",
+            "https://www.istockphoto.com/photo/extreme-close-up-of-great-white-shark-attack-with-blood-gm1301668323-393646848?utm_source=unsplash&utm_medium=affiliate&utm_campaign=category_photos_top&utm_content=https%3A%2F%2Funsplash.com%2Fimages%2Fanimals%2Fshark&utm_term=shark%3A%3A%3A",
+            "https://www.shutterstock.com/image-photo/schooling-grey-reef-sharks-ningaloo-western-1488699209",
+        ]
+        var size = links.length;
+        function randomPic(){
+            var randomValue = Math.floor((Math.random() * size) + 1);
+            var link = links[randomValue];
+            document.getElementById("imgRandom").src = link;
+        }
+
+        const paths = [
+            "imgs/shark1.jpg",
+            "imgs/shark2.jpg",
+            "imgs/shark3.jpg",
+            "imgs/shark4.jpg",
+            "imgs/shark5.jpg",
+        ]
+
+        function randomPath(){
+            var randomValue = Math.floor((Math.random() * size));
+            var link = paths[randomValue];
+            document.getElementById("imgRandom").src = link;
+        }
+    </script>
+</html>

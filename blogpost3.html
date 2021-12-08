@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1 id="text">Inputs</h1>
+        <input type="checkbox" id="pale" onclick="paleFunction()">
+        <label for="pale">Brown colors</label>
+        <p id="text" style="display:none">Sample text</p>
+        <div id="entryBox">
+            <input type="text" id="textEntry">
+            <label for="textEntry">Enter some text here</label>
+            <button id="button" onclick="save()">Save text</button>
+            <p id="saveText"></p>
+        </div>
+        <img id="image" src="" alt="">
+        <button onclick="showImage()">Click for image</button>
+    </body>
+    <script>
+        function paleFunction(){
+            var checkBox = document.getElementById("pale");
+            var text = document.getElementById("text");
+            if (checkBox.checked == true){
+                text.style.display = "block";
+                document.body.style.backgroundColor = "blanchedalmond";
+                text.style.color = "tan";
+            } else {
+                document.body.style.backgroundColor = "white";
+                text.style.color = "black";
+            }
+        }
+        function save(){
+            var text = document.getElementById("textEntry").value;
+            document.getElementById("saveText").innerText = "Your text is: " + text;
+        }
+        function showImage(){
+            document.getElementById("image").src = "imgs/download.jfif";
+        }
+    </script>
+</html>

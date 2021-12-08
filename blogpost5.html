@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post 5</title>
+    <link rel="stylesheet" href="blogpost5.css">
+</head>
+<body>
+    <p>CSS animations are boring</p>
+    <h1>Trying javascript animations</h1>
+    <button onclick="animation()">Animate</button>
+    <button onclick="randomAnimation()">Random Animate</button>
+    <div id="container">
+        <div id="animation"></div>
+    </div>
+</body>
+<script>
+    function animation(){
+        let id = null;
+        const elem = document.getElementById("animation");   
+        let pos = 0;
+        clearInterval(id);
+        id = setInterval(frame, 5);
+        function frame() {
+            if (pos == 375) {
+            clearInterval(id);
+            } else {
+                pos++; 
+                elem.style.top = pos + "px"; 
+                elem.style.left = pos + "px"; 
+            }
+        } 
+    }
+    function randomAnimation(){
+        var id = null;
+        const anim = document.getElementById("animation");
+        anim.style.top = 150;
+        anim.style.left = 150;
+        anim.style.width = 50;
+        anim.style.height = 50;
+        clearInterval(id);
+        id = setInterval(frame, 5);
+        function frame(){
+            var redValue = Math.floor((Math.random() * 255));
+            var greenValue = Math.floor((Math.random() * 255));
+            var blueValue = Math.floor((Math.random() * 255));
+            var color = "#" + redValue.toString(16) + blueValue.toString(16) + greenValue.toString(16);
+            anim.style.backgroundColor = color;
+
+            var negPos = Math.random() < 0.5 ? -1 : 1;
+            var guy = Math.floor(((Math.random() + negPos) * 3));
+
+            for (let i = 0; i < 10; i++){
+                anim.style.width += guy;
+                anim.style.height += guy;
+            }
+        }
+    }
+</script>
+</html>

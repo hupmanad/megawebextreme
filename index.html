@@ -39,5 +39,66 @@
             <br> because I feel like it is so important to actually a good webpage. If i can just crack positioning then I think the
             <br> rest will fall into place.
         </p>
-    </body>
+
+        <h3>Third blog post</h3>
+        <a href="blogpost3.html">Blog post 3</a>
+        <p>This one is pretty brief. I was playing with inputs and buttons. In particular, I wanted to see how easy it would be to allow
+            a text input, and then saving that input somehow. I think the post it self seems very simple, but that is because I learned
+            what I needed to. This should be especially important for the React App, because I want there to be a way for users to add
+            their own facts to the database. It would be very easy to have a series of text input boxes that the user would enter the 
+            appropriate information into, and then parse it using the post method I wrote for Web Service.
+        </p>
+        <p>I also used the document.getElementById method, which is actually very useful for making on-the-fly changes to the webpage
+            itself. I will likely make more use of it for the react app. I would very much like to show a different picture every time
+            a new fact comes up, so I could have an image box that can have its src attribute changed when a new fact is loaded.
+            That would likely require some array of image links, and just load a random one of those as the source. Should be easy enough.
+        </p>
+        <nav>
+            <a href="https://www.w3schools.com/html/html_forms.asp">Forms</a>
+            <a href="https://www.w3schools.com/howto/howto_js_display_checkbox_text.asp">Check box checked property</a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">MDN Inputs</a>
+            <a href="https://tutorial.eyehunts.com/js/change-text-in-p-tag-javascript-easy-html-example-code/#:~:text=Find%20the%20element%20by%20id,dynamically%20based%20on%20the%20conditions.">getElementById</a>
+        </nav>
+
+        <h3>Fouth blog post</h3>
+        <a href="blogpost4.html">Blog post 4</a>
+        <p>This one is a bit of an extension past the last one, where I speculated that I could generate random images by using an array of
+            links to various pictures, then generate a random index between 0 and the size of the array and use that link for my image source,
+            but it is giving me a cross-origin related issue. I assume it is a problem with the stock sites that I am using for security reasons.
+            I'm sure that I could save a lot of these pictures and then do the exact same thing but with strings pointing to their local location
+            vs an actual URL, but I am concerned about that using too much space to hold a bunch of uncompressed image files.
+        </p>
+        <p>I have it working through the images saved onto my computer. It is definitely not perfect, but I don't think that it will be a problem
+            in the React App. There likely will not be an entirely unique image for every fact, so I would not be saving hundreds of them. There could
+            possibly be some strategy or syntax that I could use to allow for the images to be used, or alternatively just a website that does not have
+            the same restrictions (such as LoremPicsum) but that might not be 100% needed. I will see as I build the app if it becomes necessary.
+        </p>
+        <nav>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)">Cross Origin Resource Policy</a>
+        </nav>
+        <p>This was the only resource I used. I wasn't looking at a lot of new HTML stuff, just trying a random image generator.</p>
+
+        <h3>Fifth blog post</h3>
+        <p>I tried some javascript animating here. We have some experience with CSS animation, but not too much. On top of that, CSS animation is naturally
+            limited. JS animation is a lot more flexible but I found it a little more difficult to implement. It's more about changing specific attributes 
+            with actual JS. The first animation was a simple one from online just to give it a little try. It just slides down the larger div element until
+            it reaches the corner, and then it will stop.
+        </p>
+        <p>For my own animation, I think I got a little too ambitious. I wanted to make a similar animation to the first one that would slide to the corner
+            as the original, but after connecting into the corner it would bounce in a random direction and bascially do that forever when it hits a wall. 
+            This is definitely more difficult, but certainly doable. It would probably need some way to keep track of the red block's position, and work
+            from there. Anyway, the animation I made moves the block to the center and rapidly changes the color. I also wanted to make it rotate, but that
+            did not work the way I expected. I thought that using the transform.rotate would adjust the current rotation by whatever amount was specified,
+            so for example I thought saying rotate(3deg) would add 3 degrees to the current rotation, but I think it just sets it to 3 degrees.
+        </p>
+        <nav>
+            <a href="https://www.w3schools.com/js/js_htmldom_animate.asp">W3 Animation</a>
+            <a href="https://www.w3schools.com/jsref/met_win_clearinterval.asp">Clear Interval</a>
+            <a href="https://stackoverflow.com/questions/11866781/how-do-i-convert-an-integer-to-a-javascript-color/11866980">Integer to color</a>
+            <a href="https://www.w3schools.com/jsref/prop_style_transform.asp">Rotations</a>
+        </nav>
+        <p>
+            <a href="FinalBlogPost.html">Final Blog Post</a>
+        </p>
+        </body>
 </html>
